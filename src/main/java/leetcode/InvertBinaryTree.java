@@ -1,5 +1,7 @@
 package leetcode;
 
+import leetcode.datastructure.TreeNode;
+
 /**
  * Created by p.chen on 2016/4/21.
  */
@@ -19,16 +21,6 @@ public class InvertBinaryTree {
         invertTree(root.right);
 
         return root;
-    }
-
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
     }
 
 }
