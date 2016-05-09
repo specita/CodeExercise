@@ -30,6 +30,9 @@ public class MajorityElement {
 
     /**
      * leetcode version
+     * Majority Vote Algorithm（只适用于一定会有主元素的情况）
+     * 每次都找出一对不同的元素，从数组中删掉，直到数组为空或只有一种元素。
+     * 不难证明，如果存在元素e出现频率超过半数，那么数组中最后剩下的就只有e
      * @param num
      * @return
      */
@@ -42,7 +45,6 @@ public class MajorityElement {
             }else if(major==num[i]){
                 count++;
             }else count--;
-
         }
         return major;
     }

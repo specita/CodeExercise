@@ -7,19 +7,13 @@ import leetcode.datastructure.TreeNode;
  */
 public class InvertBinaryTree {
     public TreeNode invertTree(TreeNode root) {
-
-        if (root.left == null || root.right == null) {
-            return root;
+        if(root == null){
+            return null;
         }
 
-
-        TreeNode temp = root.left;
-        root.left = root.right;
-        root.right = temp;
-
-        invertTree(root.left);
-        invertTree(root.right);
-
+        TreeNode temp = invertTree(root.right);
+        root.right = invertTree(root.left);
+        root.left = temp;
         return root;
     }
 
